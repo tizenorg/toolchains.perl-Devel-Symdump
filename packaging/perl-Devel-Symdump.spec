@@ -8,6 +8,7 @@ Group:          Development/Libraries
 License:        GPL+ or Artistic
 URL:            http://search.cpan.org/dist/Devel-Symdump/
 Source0:        http://www.cpan.org/authors/id/A/AN/ANDK/Devel-Symdump-%{version}.tar.gz
+Source1001: packaging/perl-Devel-Symdump.manifest 
 
 BuildArch:      noarch
 BuildRequires:  perl(ExtUtils::MakeMaker), perl(Test::More)
@@ -22,6 +23,7 @@ perl's symbol table and the class hierarchy within a running program.
 %setup -q -n Devel-Symdump-%{version}
 
 %build
+cp %{SOURCE1001} .
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 make %{?_smp_mflags}
 
@@ -40,6 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %files
+%manifest perl-Devel-Symdump.manifest
 %defattr(-,root,root,-)
 %doc ChangeLog README
 %{perl_vendorlib}/Devel/*
