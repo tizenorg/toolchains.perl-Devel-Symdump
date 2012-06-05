@@ -7,7 +7,7 @@ Summary:        A Perl module for inspecting Perl's symbol table
 Group:          Development/Libraries
 License:        GPL+ or Artistic
 URL:            http://search.cpan.org/dist/Devel-Symdump/
-Source0:        http://www.cpan.org/authors/id/A/AN/ANDK/Devel-Symdump-%{version}.tar.gz
+Source0:        %{name}-%{version}.tar.gz
 Source1001: packaging/perl-Devel-Symdump.manifest 
 
 BuildArch:      noarch
@@ -20,7 +20,7 @@ perl's symbol table and the class hierarchy within a running program.
 
 
 %prep
-%setup -q -n Devel-Symdump-%{version}
+%setup -q
 
 %build
 cp %{SOURCE1001} .
