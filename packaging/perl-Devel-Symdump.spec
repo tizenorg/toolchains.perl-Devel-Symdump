@@ -47,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %{perl_vendorlib}/Devel/*
 %ifarch %{arm}
-%doc %{_mandir}/man3/*.3pm*
+%{_mandir}/man3/Devel/*.3pm*
 %endif
