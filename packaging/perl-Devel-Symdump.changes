@@ -1,6 +1,3 @@
-* Tue Jun 5 2012 Junfeng Dong <junfeng.dong@intel.com> - 2.08
-- Clean up spec file for packaging.
-
 * Wed June 30 2010 Quanxian Wang <quanxian.wang@intel.com>  - 2.08
 - Add %doc before man file entry
 
